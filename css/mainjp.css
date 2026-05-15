@@ -1,0 +1,1076 @@
+@charset "utf-8";
+
+/* デフォルトスタイルをリセット
+==============================================================================*/
+* {margin:0;padding:0;}
+li {list-style-type:none;}
+table {border-collapse:collapse;}
+/* 基本スタイル
+==============================================================================*/
+
+/* 全ページ共通 */
+body {
+	background:#f9f9f9 url(../img/common/bg_common_down.gif) no-repeat 0 0;	/* 共通背景 */
+	position:relative;	/* ヘルプボタン基点 */
+	font-size:large;	/* 基本文字サイズ */
+	color:#333;
+	word-break:break-all; 
+}
+/* フォントサイズ継承しないから直書き */
+input {font-size:large;}
+
+/* 強調カラー */
+span.red {color:#ff0000;}
+span.white {color:#ffffff;}
+span.gray {color:#555555;}
+span.blackGray {color:#666666;}
+span.commonColor {color:#1862A1;}
+span.green {color:#339933;}
+span.yellow {color:#E1A400;}
+span.lightgreen {color:#00C900;}
+
+
+/* フォントサイズ変更用 */
+.mediumFont {font-size:medium;}
+.smallFont {font-size:small;}
+
+/* インライン配置 */
+.left {text-align:left;}
+.center {text-align:center;}
+.right {text-align:right;}
+
+.floatLeft {float:left;}
+.floatRight {float:right;}
+
+/* 上画面テキスト */
+.upMsg {
+	position:absolute;
+	top:65px;
+	margin:0px 15px 0 30px;
+}
+
+/* もどるボタン */
+div.backBtn {
+	position:fixed;
+	left:15px;
+	top:0px;
+	z-index:100;
+}
+/* ヘルプボタン */
+div.helpBtn {
+	position:fixed;
+	right:17px;
+	top:0px;
+	z-index:100;
+}
+/* ナビ */
+div.navi {
+	position:fixed;
+	left:5px;
+	top:0px;
+	z-index:100;
+}
+
+/* 下画面ページ全体幅を290pxにする */
+div.DocBody {margin:34px 15px 5px 15px;}
+
+/* 帯のタイトルがあるページ */
+div.Contents {margin:10px 15px 5px 15px;}
+div.Contents02 {margin:10px 15px;}
+
+/* ボタン間隔 */
+.btnMargin1 {margin-bottom:5px;}
+.btnMargin2 {margin-bottom:10px;}
+.btnMargin3 {margin:5px 0 10px 10px;}
+
+/* 段落マージン */
+.paragraph {margin-bottom:10px;}
+
+/* 上画面共通背景 */
+body.commonUp {background-image:url(../img/common/bg_common_up.gif);}
+
+/* 上画面DS用背景 */
+body.dsUp {background-image:url(../img/common/bg_ds_up.gif);}
+
+/* 上画面3DS用背景 */
+body.ctrUp {background-image:url(../img/common/bg_ds_up.gif);}
+
+/* 上画面Wii用背景 */
+body.wiiUp {background-image:url(../img/common/bg_wii_up.gif);}
+
+/* 上画面Wii U用背景 */
+body.wupUp {background-image:url(../img/common/bg_wup_up.gif);}
+
+/* 下画面共通背景 */
+body.commonDown {background-image:url(../img/common/bg_common_down.gif);}
+
+/* 下画面DS用背景 */
+body.dsDown {background-image:url(../img/common/bg_ds_down.gif);}
+
+/* 下画面3DS用背景 */
+body.ctrDown {background-image:url(../img/common/bg_ds_down.gif);}
+
+/* 下画面Wii用背景 */
+body.wiiDown {background-image:url(../img/common/bg_wii_down.gif);}
+
+/* 下画面Wii U用背景 */
+body.wupDown {background-image:url(../img/common/bg_wup_down.gif);}
+
+/* ドットライン */
+.dotSection {
+	margin-top:10px;
+	padding-top:10px;
+	background:url(../img/common/line_dot.gif) repeat-x 0 0;
+}
+
+/* 黒いボーダー */
+.lineBlock {
+	border:#333 solid 1px;
+	padding:8px 10px;
+	margin-bottom:10px;
+}
+
+/* 画像左右配置 */
+.imgFloating .right {float:right;}
+.imgFloating .left {float:left;}
+.imgFloating {clear:both;}
+
+/* float解除用 */
+.clearBoth {clear:both;}
+
+/*vartical-align代替*/
+.iconMiddle {
+	margin:2px 0 0 0;
+}
+
+.accentIcon {
+	position:absolute;
+	right:10px;
+	bottom:3px;
+}
+
+
+/* 各ページのカスタムスタイル
+==============================================================================*/
+
+/* TOP上画面テキスト
+--------------------------------------------*/
+.topUpMsg {
+	position:absolute;
+	top:116px;
+	left:0px;
+	text-align:center;
+}
+
+/* キーワード検索画面
+--------------------------------------------*/
+.keywordPage {
+	margin:5px 8px 15px 15px;
+}
+
+/* ジャンル検索画面,とことん
+--------------------------------------------*/
+div.genre {margin-bottom:15px;}
+.genre table {
+	width:280px;
+	word-break:break-all;
+}
+.genre table td label {
+	display:block;
+}
+.genre table td.check {
+	padding:3px 5px 0 5px;
+	width:10px;
+}
+.genre table td.genre1 {
+	padding-right:10px;
+	width:115px;
+}
+.genre table td.genre2 {
+	width:115px;
+	padding-right:5px;
+}
+.genre table td.line {
+	padding:5px 0;
+}
+
+/* 検索結果上画面
+--------------------------------------------*/
+/* 検索結果メッセージ */
+#listUp .searchMsg {
+	position:absolute;
+	top:55px;
+	margin:0px 30px 0px 30px;
+}
+
+#listUp .searchInfo {
+	position:absolute;
+	top:101px;
+	left:30px;
+	width:340px;
+	padding-top:9px;
+	margin-bottom:4px;
+	background:url(../img/search/img_searchInfo_top.gif) no-repeat 0 0;
+}
+#listUp .searchInfoNew {
+	position:absolute;
+	top:131px;
+	left:30px;
+	width:340px;
+	padding:0px 8px 9px 8px;
+	margin-bottom:4px;
+}
+#listUp .searchInfo ul {
+	width:324px;
+	min-height:91px;
+	padding:0px 8px 9px 8px;
+	background:url(../img/search/img_searchInfo_btm.gif) no-repeat bottom 0;
+}
+#listUp .searchInfo li,
+#listUp .searchInfoNew li {
+	word-break:break-all;
+}
+#listUp .searchInfo li.listLine {margin:5px 0;}
+#listUp .searchInfo li img,
+#listUp .searchInfoNew li img {
+	margin:0 5px 2px 0;
+	vertical-align:middle;
+}
+
+#listUp .searchInfo li.icon2 {
+	margin:5px 0 1px 0;
+}
+
+#listUp .searchInfo li.icon2 .iconLeft {
+	float:left;
+	width:170px;
+}
+
+/* 上画面検索一覧共通 */
+body.SearchArea {background-image:url(../img/search/img_list_up.gif);}
+
+/* 上画面検索一覧DS */
+body.dsSearchArea {background-image:url(../img/search/img_list_ds_up.gif);}
+
+/* 上画面検索一覧Wii */
+body.wiiSearchArea {background-image:url(../img/search/img_list_wii_up.gif);}
+body.wareSearchArea {background-image:url(../img/ware/img_list_g_up.gif);}
+
+/* 上画面検索一覧Wii U */
+body.wupSearchArea {background-image:url(../img/search/img_list_wup_up.gif);}
+body.wup_downloadableSearchArea {background-image:url(../img/ware/img_list_wup_up.gif);}
+
+/* 上画面検索一覧3DS体験版 */
+body.trialSearchArea {background-image:url(../img/search/img_list_trial_up.gif);}
+
+
+/* 検索結果下画面
+--------------------------------------------*/
+#listDown .searchList {
+	position:relative;
+	padding:0;
+	font-size:medium;
+}
+#listDown .searchList a {
+	display:block;
+	text-decoration:none;
+	color:#333;
+	height:96px;
+}
+
+/* list ctr */
+#listDown .searchList a.ctrSoft {
+	background:url(../img/search/bg_list_ctr.gif) no-repeat 0 0;
+}
+#listDown .searchList a.ctrclassicsSoft {
+	background:url(../img/search/bg_list_ctr_classics.gif) no-repeat 0 0;	/* 3DS クラシックス */
+}
+#listDown .searchList a.ctrdlSoft {
+	background:url(../img/search/bg_list_ctr_dl.gif) no-repeat 0 0;	/* 3DS DL */
+}
+#listDown .searchList a.ctrvcSoft {
+	background:url(../img/search/bg_list_ctr_vc.gif) no-repeat 0 0;	/* 3DS VC */
+}
+#listDown .searchList a.ctrdownloadableSoft {
+	background:url(../img/search/bg_list_ctr_downloadable.gif) no-repeat 0 0;
+}
+/* list Wii U */
+#listDown .searchList a.wupSoft {
+	background:url(../img/search/bg_list_wup.gif) no-repeat 0 0;
+}
+#listDown .searchList a.wupdownloadableSoft {
+	background:url(../img/search/bg_list_wup_downloadable.gif) no-repeat 0 0;
+}
+#listDown .searchList a.wupdlSoft {
+	background:url(../img/search/bg_list_wup_dl.gif) no-repeat 0 0;
+}
+#listDown .searchList a.wupvcSoft {
+	background:url(../img/search/bg_list_wup_vc.gif) no-repeat 0 0;
+}
+/* list Wii */
+#listDown .searchList a.wiiSoft {
+	background:url(../img/search/bg_list_wii.gif) no-repeat 0 0;
+}
+#listDown .searchList a.wiiwareSoft {
+	background:url(../img/search/bg_list_wiiware.gif) no-repeat 0 0;
+}
+#listDown .searchList a.vcSoft {
+	background:url(../img/search/bg_list_vc.gif) no-repeat 0 0;
+}
+/* list ds */
+#listDown .searchList a.dsSoft {
+	background:url(../img/search/bg_list_ds.gif) no-repeat 0 0;
+}
+#listDown .searchList a.dsiSoft {
+	background:url(../img/search/bg_list_dsi.gif) no-repeat 0 0;
+}
+#listDown .searchList a.dsiwareSoft {
+	background:url(../img/search/bg_list_dsiware.gif) no-repeat 0 0;
+}
+
+#listDown .searchList a span {
+	display:block;
+}
+#listDown .searchList img.thumb {
+	position:absolute;
+	left:8px;
+	top:21px;
+}
+#listDown .searchList a span.title {
+	position:absolute;
+	left:75px;
+	top:22px;
+	width:205px;
+}
+#listDown .searchList span.date {
+	color:#999999;
+}
+#listDown .searchList a img.salesIcon {
+	position:absolute;
+	bottom:10px;
+	right:10px;
+}
+#listDown .searchList a img.salesIcon2 {
+	position:absolute;
+	bottom:30px;
+	right:10px;
+}
+#listDown .searchList a span.Sname {
+	margin-right:35px;
+}
+#listDown .searchList a span.Lname {
+	margin-right:0px;
+}
+#listDown .paging {
+
+	margin-top:10px;
+	height:43px;
+	position:relative;
+}
+#listDown .paging_now {
+	text-align:center;
+	background:url(../img/search/bg_paging_now.gif) no-repeat center center;
+}
+#listDown .paging a {
+	display:block;
+	width:52px;
+	height:21px;
+	padding:7px 0;
+	text-align:center;
+	text-decoration:none;
+	color:#333;
+	background:url(../img/search/bg_paging.gif) no-repeat left center;
+}
+#listDown .hardlimit {
+	text-align:right;
+	margin:0 0 10px 0;
+}
+#listDown .hardBtn {
+	text-align:center;
+	margin-top:10px;
+}
+#listDown .hardBtn li {
+	display:inline;
+}
+#listDown .moreBtn {
+	text-align:center;
+	margin-top:5px;
+}
+#listDown .noSearch {
+	margin-top:20px;
+}
+
+#listDown .hardSwitch {
+	margin-top:10px;
+	/*text-align:center;*/
+	clear:both;
+}
+
+#listDown .hardSwitch img {
+	margin:0 1px;
+}
+
+
+#listDown .moreSearch {
+	margin-top:10px;
+	text-align:center;
+}
+
+/* 検索結果下ページ　検索リスト
+--------------------------------------------*/
+#keywordList {
+	color:#333;	
+	font-size:medium;
+	position:relative;
+}
+table.keywordtxt {
+	position:absolute;
+	top:33px;
+	left:14px;
+}
+table.keywordtxt td.words {
+	width:123px;
+	height:45px;
+	text-align:center;
+}
+
+/* 詳細ページ上画面
+--------------------------------------------*/
+.detailUp .dsTitle {
+	background-color:#FF418C;
+	color:#fff;
+	padding:0 12px;
+	height:2em;
+	font-weight:bold;
+}
+.detailUp .wiiTitle {
+	background-color:#34BEED;
+	color:#fff;
+	padding:0 12px;
+	height:2em;
+	font-weight:bold;
+}
+.detailUp .wupTitle {
+	background-color:#0096C8;
+	color:#fff;
+	padding:0 12px;
+	height:2em;
+	font-weight:bold;
+}
+.detailUp .ctrTitle {
+	background-color:#CD202C;
+	color:#fff;
+	padding:0 12px;
+	height:2em;
+	font-weight:bold;
+}
+.detailUp .leftIcon {
+	position:absolute;
+	left:20px;
+	top:47px;
+}
+
+.detailUp .beginner {
+	position:absolute;
+	bottom:10px;
+	left:20px;
+}
+
+.detailUp .leftIcon td {
+	width:43px;
+	text-align:center;
+}
+.detailUp .wifi {
+	position:absolute;
+	right:5px;
+	bottom:10px;
+	width:95px;
+	text-align:right;
+}
+.detailUp .cero {
+}
+.detailUp .n_net{
+	position:absolute;
+	left:15px;
+	top:145px;
+}
+.detailUp .package {
+	position:absolute;
+	left:115px;
+	top:44px;
+}
+.detailUp .rightIconWifi {
+	position:absolute;
+	right:5px;
+	top:44px;
+	width:98px;
+}
+.detailUp .rightIconWifi li {
+	display:inline;
+}
+
+.detailUp .rightIcon {
+	position:absolute;
+	right:5px;
+	top:44px;
+	width:78px;
+	text-align:center;
+}
+.detailUp li {
+	margin-bottom:3px;
+}
+.detailUp .rightIcon li {
+	margin-bottom:1px;
+}
+
+/* 詳細ページ下画面
+--------------------------------------------*/
+.detailDown .dsPackage {
+	padding:30px 15px 10px 15px;
+	background-color:#FF418C;
+	color:#fff;
+	font-weight:bold;
+}
+.detailDown .wiiPackage {
+	padding:30px 15px 10px 15px;
+	background-color:#34BEED;
+	color:#fff;
+	font-weight:bold;
+}
+.detailDown .wupPackage {
+	padding:30px 15px 10px 15px;
+	background-color:#0096C8;
+	color:#fff;
+	font-weight:bold;
+}
+.detailDown .ctrPackage {
+	padding:30px 15px 10px 15px;
+	background-color:#CD202C;
+	color:#fff;
+	font-weight:bold;
+}
+.detailDown .dsInfo {
+	color:#7F1A42;
+}
+.detailDown .wiiInfo {
+	color:#33648D;
+}
+.detailDown .wupInfo {
+	color:#0867A9;
+}
+.detailDown .ctrInfo {
+	color:#A50408;
+}
+.detailDown ul {
+	margin:5px 0 0 0;
+}
+
+.detailDown ul li {
+	background-position:0 2px;
+	background-repeat:no-repeat;
+	padding-left:96px;
+	margin-bottom:5px;
+}
+.detailDown .dsInfo .hard {background-image:url(../img/detail/ttl_hard_ds.gif);}
+.detailDown .wiiInfo .hard {background-image:url(../img/detail/ttl_hard_wii.gif);}
+.detailDown .wupInfo .hard {background-image:url(../img/detail/ttl_hard_wup.gif);}
+.detailDown .ctrInfo .hard {background-image:url(../img/detail/ttl_hard_ctr.gif);}
+.detailDown .dsInfo .genre {background-image:url(../img/detail/ttl_genre_ds.gif);}
+.detailDown .wiiInfo .genre {background-image:url(../img/detail/ttl_genre_wii.gif);}
+.detailDown .wupInfo .genre {background-image:url(../img/detail/ttl_genre_wup.gif);}
+.detailDown .ctrInfo .genre {background-image:url(../img/detail/ttl_genre_ctr.gif);}
+.detailDown .dsInfo .maker {background-image:url(../img/detail/ttl_maker_ds.gif);}
+.detailDown .wiiInfo .maker {background-image:url(../img/detail/ttl_maker_wii.gif);}
+.detailDown .wupInfo .maker {background-image:url(../img/detail/ttl_maker_wup.gif);}
+.detailDown .ctrInfo .maker {background-image:url(../img/detail/ttl_maker_ctr.gif);}
+.detailDown .dsInfo .release {background-image:url(../img/detail/ttl_release_ds.gif);}
+.detailDown .wiiInfo .release {background-image:url(../img/detail/ttl_release_wii.gif);}
+.detailDown .wupInfo .release {background-image:url(../img/detail/ttl_release_wup.gif);}
+.detailDown .ctrInfo .release {background-image:url(../img/detail/ttl_release_ctr.gif);}
+.detailDown .dsInfo .price {background-image:url(../img/detail/ttl_price_ds.gif);}
+.detailDown .wiiInfo .price {background-image:url(../img/detail/ttl_price_wii.gif);}
+.detailDown .wupInfo .price {background-image:url(../img/detail/ttl_price_wup.gif);}
+.detailDown .ctrInfo .price {background-image:url(../img/detail/ttl_price_ctr.gif);}
+
+/*DSi,Wiiポイント*/
+.detailDown .dsInfo .point {background-image:url(../img/detail/ttl_point_ds.gif);}
+.detailDown .wiiInfo .point {background-image:url(../img/detail/ttl_point_wii.gif);}
+
+/*併売ソフト用価格*/
+.detailDown ul li.priceOther th {
+	font-weight:normal;
+	text-align:left;
+}
+.detailDown ul li.priceOther td {text-align:right;}
+.detailDown .wupInfo li.priceOther {
+	background-image:url(../img/detail/ttl_price_wup.gif);
+	padding:22px 0 0 2px;
+}
+.detailDown .ctrInfo li.priceOther {
+	background-image:url(../img/detail/ttl_price_ctr.gif);
+	padding:22px 0 0 2px;
+}
+.detailDown .priceCaption {
+	font-size:medium;
+	padding:0;
+}
+
+.detailDown .detailBtn {
+	margin-bottom:15px;
+}
+.detailDown .detailBtn li {
+	margin-bottom:4px;
+}
+.detailDown .wifiCaption {
+	margin:10px 0;
+	font-size:small;
+}
+.detailDown .copyRight {
+	padding-top:10px;
+	margin-top:10px;
+	font-size:small;
+	color:#999;
+	background:url(../img/common/line_dot.gif) repeat-x 0 0;
+}
+.detailNaviMargin {
+	margin:25px 0 0 0;
+}
+
+
+/* ゲーム画面
+--------------------------------------------*/
+#ssLeftBtn {
+	position:absolute;
+	left:0;
+	top:95px;
+}
+#ssRightBtn {
+	position:absolute;
+	right:0;
+	top:95px;
+}
+
+
+/* あそんだ人のコメント
+--------------------------------------------*/
+.clubNintendo {
+	font-size:medium;
+	text-align:right;
+	color:#666;
+}
+/*あそんだ人のコメント男*/
+div.cmtColor1 {
+	background-color:#C8ECFA;
+	padding:5px 6px;
+	margin-bottom:5px;
+}
+/*あそんだ人のコメント女*/
+div.cmtColor2 {
+	background-color:#FFC5DD;
+	padding:5px 6px;
+	margin-bottom:5px;
+}
+
+
+/* あそんだ人の評価
+--------------------------------------------*/
+.review {
+	width:100%;
+}
+.review td {
+	border:#ccc solid 1px;
+	text-align:center;
+	padding:4px 5px;
+}
+
+td.white {
+	background-color:#ffffff;
+	width:40%;
+}
+td.lightYellow {
+	background-color:#FDFDC9;
+	width:20%;
+}
+td.lightBlue {
+	background-color:#E9EEF8;
+	width:20%;
+}
+td.lightPink {
+	background-color:#FAEFED;
+	width:20%;
+}
+
+.reviewGraph {
+	margin:15px 10px 5px;
+}
+.reviewGraph table {
+	width:300px;
+}
+.reviewGraph .graph {
+	margin-bottom:20px;
+}
+.reviewGraph .graph .reviewYellow {
+	background-color:#F4BF01;
+	height:30px;
+}
+.reviewGraph .graph .reviewGreen {background-color:#339933;}
+
+
+/* 3DSについて
+--------------------------------------------*/
+.about3dsNum1 {
+	padding-left:21px;
+	margin-bottom:5px;
+	color:#CD202C;
+	background:url(../img/about3ds/ico_1.gif) no-repeat 0 center;
+}
+.about3dsNum2 {
+	padding-left:21px;
+	margin-bottom:5px;
+	color:#CD202C;
+	background:url(../img/about3ds/ico_2.gif) no-repeat 0 center;
+}
+.about3dsNum3 {
+	padding-left:21px;
+	margin-bottom:5px;
+	color:#CD202C;
+	background:url(../img/about3ds/ico_3.gif) no-repeat 0 center;
+}
+.about3dsNum4 {
+	padding-left:21px;
+	margin-bottom:5px;
+	color:#CD202C;
+	background:url(../img/about3ds/ico_4.gif) no-repeat 0 center;
+}
+
+
+/* その他の機能
+--------------------------------------------*/
+div.rimocon {
+	background-color:#C2ECFA;
+	padding:10px;
+}
+
+img.Players {
+	margin-right:5px;
+	position:relative;
+	top:2px;
+}
+.plusIcon {
+	margin:10px 0;
+}
+
+.dsPlayerIcon {
+	padding-left:96px;
+	margin-bottom:10px;
+	background:url(../img/detail/ico_player_ds.gif) no-repeat 0 2px;
+}
+.ctrPlayerIcon {
+	padding-left:96px;
+	margin-bottom:10px;
+	background:url(../img/detail/ico_player_ctr.gif) no-repeat 0 2px;
+}
+.wupPlayerIcon {
+	padding-left:96px;
+	margin-bottom:10px;
+	background:url(../img/detail/ico_player_wup.gif) no-repeat 0 2px;
+}
+.dsNetworkType {
+	padding-left:96px;
+	margin-bottom:10px;
+	background:url(../img/detail/ico_network_type_ds.gif) no-repeat 0 2px;
+}
+.ctrNetworkType {
+	padding-left:96px;
+	margin-bottom:10px;
+	background:url(../img/detail/ico_network_type_ctr.gif) no-repeat 0 2px;
+}
+.wupNetworkType {
+	padding-left:96px;
+	margin-bottom:10px;
+	background:url(../img/detail/ico_network_type_wup.gif) no-repeat 0 2px;
+}
+
+.dsOptionIcon {
+	padding-left:96px;
+	margin-bottom:10px;
+	background:url(../img/detail/ico_option_ds.gif) no-repeat 0 2px;
+}
+.ctrOptionIcon {
+	padding-left:96px;
+	margin-bottom:10px;
+	background:url(../img/detail/ico_option_ctr.gif) no-repeat 0 2px;
+}
+.wupOptionIcon {
+	padding-left:96px;
+	margin-bottom:10px;
+	background:url(../img/detail/ico_option_wup.gif) no-repeat 0 2px;
+}
+
+.networkCmt {
+	margin-bottom:10px;
+	padding-bottom:10px;
+	background:url(../img/common/line_dot.gif) repeat-x 0 bottom;
+}
+
+/* 発売カレンダー
+--------------------------------------------*/
+.calendarMonth {
+	background-color:#1862A1;
+	padding:33px 10px 8px;
+	font-weight:bold;
+	color:#fff;
+}
+.calendarDate {
+	background-color:#4F90C7;
+	padding:4px 5px;
+	margin-right:2px;
+	font-weight:bold;
+	color:#fff;
+}
+.monthSwitch {
+	position:relative;
+	height:55px;
+	margin-top:10px;
+}
+.monthSwitch .prev {
+	position:absolute;
+	top:0;
+	left:0;
+}
+.monthSwitch .next {
+	position:absolute;
+	top:0;
+	right:0;
+}
+
+
+/* おすすめソフトをさがす
+--------------------------------------------*/
+.recommend {
+	margin:0 0 15px 15px;
+}
+
+.recommend table {
+	width:100%;
+}
+
+.recommend .age td {
+	width:50%;
+	padding:5px 0;
+}
+.recommend td input {
+	margin:4px 5px 0 0;
+}
+
+.recommend .gender td {
+	width:33%;
+	padding:5px 0;
+}
+
+.recommend .rank td {
+	padding:5px 0;
+}
+
+.recommend .rank .checkbox {
+	width:5%;
+}
+.recommend .rank .icon {
+	width:15%;
+}
+.recommend .rank .name {
+	width:30%;
+}
+
+/* 売れてるソフトとは
+--------------------------------------------*/
+table.sales {
+	width:290px;
+}
+
+table.sales td {
+	padding:6px 0;
+	font-size:medium;
+}
+.sales .icon {width:40px;}
+.sales .name {width:105px;}
+.sales {margin-bottom:15px;}
+
+/* おすすめソフトとは
+--------------------------------------------*/
+table.recommendRank {
+	width:260px;
+}
+
+.recommendRank .icon {
+	width:60px;
+	padding:3px 0;
+}
+.recommendRank .name {
+	width:100px;
+	text-align:left;
+}
+.recommendRank .value {
+	width:100px;
+	text-align:right;
+}
+.recommendWii {
+	padding:10px 9px 5px;
+	border-left:1px solid #34BEED;
+	border-right:1px solid #34BEED;
+}
+.recommendWup {
+	padding:10px 9px 5px;
+	border-left:1px solid #0096C8;
+	border-right:1px solid #0096C8;
+}
+.recommendCtr {
+	padding:10px 9px 5px;
+	border-left:1px solid #CD202C;
+	border-right:1px solid #CD202C;
+}
+
+
+/* ヘルプ
+--------------------------------------------*/
+.helpSection {
+	margin-bottom:20px;
+}
+
+.helpSection table td {
+	padding:2px 0;
+	font-size:medium;
+}
+
+
+.helpTitle {
+	margin-bottom:5px;
+	color:#1862A1;
+}
+.helpSection table.helpIcon td {
+	padding:6px 0;
+}
+table.helpIconList {
+	margin:7px 0 0 5px;
+}
+
+.helpIcon .icon {width:54px;}
+.helpIcon .name {width:91px;}
+.helpIconList .icon {width:72px;}
+.helpIconList .name {width:70px;}
+.helpCero .icon {width:40px;}
+.helpCero .name {width:105px;}
+.helpSales .icon {width:40px;}
+.helpSales .name {width:105px;}
+.helpRank .icon {width:40px;}
+.helpRank .name {width:105px;}
+.helpSales {margin-bottom:15px;}
+.helpRank {margin-bottom:15px;}
+
+
+
+/* 汎用 margin
+==============================================================================*/
+.mt30 {margin-top:30px;}
+.mt25 {margin-top:25px;}
+.mt20 {margin-top:20px;}
+.mt15 {margin-top:15px;}
+.mt10 {margin-top:10px;}
+.mt9 {margin-top:9px;}
+.mt8 {margin-top:8px;}
+.mt7 {margin-top:7px;}
+.mt6 {margin-top:6px;}
+.mt5 {margin-top:5px;}
+.mt4 {margin-top:4px;}
+.mt3 {margin-top:3px;}
+.mt2 {margin-top:2px;}
+.mt1 {margin-top:1px;}
+.mt0 {margin-top:0px;}
+
+.mr30 {margin-right:30px;}
+.mr25 {margin-right:25px;}
+.mr20 {margin-right:20px;}
+.mr15 {margin-right:15px;}
+.mr10 {margin-right:10px;}
+.mr9 {margin-right:9px;}
+.mr8 {margin-right:8px;}
+.mr7 {margin-right:7px;}
+.mr6 {margin-right:6px;}
+.mr5 {margin-right:5px;}
+.mr4 {margin-right:4px;}
+.mr3 {margin-right:3px;}
+.mr2 {margin-right:2px;}
+.mr1 {margin-right:1px;}
+.mr0 {margin-right:0px;}
+
+.mb30 {margin-bottom:30px;}
+.mb25 {margin-bottom:25px;}
+.mb20 {margin-bottom:20px;}
+.mb15 {margin-bottom:15px;}
+.mb10 {margin-bottom:10px;}
+.mb12 {margin-bottom:12px;}
+.mb9 {margin-bottom:9px;}
+.mb8 {margin-bottom:8px;}
+.mb7 {margin-bottom:7px;}
+.mb6 {margin-bottom:6px;}
+.mb5 {margin-bottom:5px;}
+.mb4 {margin-bottom:4px;}
+.mb3 {margin-bottom:3px;}
+.mb2 {margin-bottom:2px;}
+.mb1 {margin-bottom:1px;}
+.mb0 {margin-bottom:0px;}
+
+.ml30 {margin-left:30px;}
+.ml25 {margin-left:25px;}
+.ml20 {margin-left:20px;}
+.ml15 {margin-left:15px;}
+.ml10 {margin-left:10px;}
+.ml9 {margin-left:9px;}
+.ml8 {margin-left:8px;}
+.ml7 {margin-left:7px;}
+.ml6 {margin-left:6px;}
+.ml5 {margin-left:5px;}
+.ml4 {margin-left:4px;}
+.ml3 {margin-left:3px;}
+.ml2 {margin-left:2px;}
+.ml1 {margin-left:1px;}
+.ml0 {margin-left:0px;}
+
+/* DS Color */
+span.dsColor {color:#7F1A42;}
+span.dsTitleColor {color:#FF418C;}
+div.dsColor {background-color:#FF418C;}
+
+/* Wii Color */
+div.wiiColor {background-color:#34BEED;}
+span.wiiTitleColor {color:#34BEED;}
+span.wiiColor {color:#33648D;}
+
+/* Wii U Color */
+div.wupColor {background-color:#0867A9;}
+span.wupTitleColor {color:#0096C8;}
+span.wupColor {color:#0867A9;}
+
+/* 3DSs Color */
+div.ctrColor {background-color:#CD202C;}
+span.ctrTitleColor {color:#CD202C;}
+span.ctrColor {color:#A50408;}
+
+div.helpTitleColor {
+	color:#fff;
+	padding:34px 15px 10px 15px;
+	background-color:#FAC41A;
+	font-weight:bold;
+}
+
+span.helpColor {color:#E19E1B;}
+
+
+.downloadSearch {
+	background:url(../img/search/bg_download_search_btm.gif) no-repeat 0 bottom;
+}
+
+.downloadSearch .section {
+	padding:10px;
+	background:url(../img/search/bg_download_search.gif) no-repeat 0 0;
+}

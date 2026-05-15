@@ -1,0 +1,891 @@
+/**   3DS Simulator   **/
+
+#simulator {
+	background:url(../img/simulator-background.jpg) no-repeat;
+	position:relative;
+	height:723px;
+	width:713px;
+}
+
+	#simulator .title h5, #simulator .title h6 {
+		font-size:11px;
+	}
+	
+	#simulator #wrapper p {
+		font-size:10px;
+	}
+
+#top {
+	position:absolute;
+	top:81px;
+	left:155px;
+}
+
+#bottom {
+	position:absolute;
+	top:416px;
+	left:197px;
+	height:212px;
+	overflow-y:scroll;
+}
+
+#back {
+	color:#fff;
+	position:absolute;
+	top:642px;
+	left:212px;
+	text-decoration:none;
+	cursor:pointer;
+}
+
+#triviaDebug {
+    cursor: pointer;
+    height: 34px;
+    left: 600px;
+    position: absolute;
+    top: 438px;
+    width: 34px;
+}
+
+/**   3DS Simulator End  **/
+
+
+/** Reset **/
+body {
+	margin: 0;
+	padding: 0;
+	font-family:arial;
+}
+
+table {
+	margin:0;
+	padding:0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin:0;
+	color:#555;
+	font-weight:normal;
+}
+
+p {
+	color:#555;
+}
+
+.clear {
+	clear:both;
+	height:1px;
+	margin-top:-1px;
+}
+
+.right {
+	float:right;
+}
+
+.left {
+	float:left;
+}
+
+img {
+	border:none;
+	display:block;
+}
+
+/* END RESET */
+
+
+
+
+/*** MAIN ZONE ***/
+
+div#wrapper2 {
+	background:#e2e2e2 url('../img/main-bg.gif') fixed;
+	width:320px;
+	height:212px;
+	padding:0;
+}
+
+div#wrapper {
+	background:#e2e2e2 url('../img/main-bg.gif') repeat-y;
+	width:292px;
+	min-height:197px;
+	padding:15px 14px 0 14px;
+}
+
+	div#wrapper h2 {
+		font-size:large;
+		margin-bottom:8px;
+	}
+
+	div#wrapper p {
+		font-size:small;
+	}
+		
+	div#wrapper .detail {
+		margin-top:10px;
+	}
+
+	
+	div#wrapper table.single {}
+		div#wrapper table.single tr {}
+			div#wrapper table.single tr td {padding:0 0 8px 0;}
+	
+	div#wrapper table.double {padding:0 0 6px 0;}
+		div#wrapper table.double tr {}
+			div#wrapper table.double tr td {padding:0 4px 4px 0;}
+			
+	div#wrapper table.triple {}
+	div#supported-games table.triple {margin:15px 0 15px 10px}
+		div#wrapper table.triple tr {}
+			div#wrapper table.triple tr td {padding:0 6px 0 0;}
+			div#supported-games table.triple tr td {padding:0 6px 0 0;}
+			
+	div#wrapper table.screens {}
+		div#wrapper table.screens tr {}
+			div#wrapper table.screens tr td {padding:0 12px 12px 0;}
+				div#wrapper table.screens tr td img {border:1px solid #333;}
+	
+	div#wrapper table {}
+		div#wrapper table tr {}
+			div#wrapper table tr td.about {padding:5px 0 0 0;}
+				div#wrapper table tr td.about a {
+					display:block; 
+					width:53px; 
+					height:17px; 
+					position:relative;
+					left:243px;
+				}
+
+
+div#supported-games {
+	background:url('../img/main-bg.gif') repeat-y;
+	width:320px;
+	padding:0;
+	text-align:center;
+}
+
+	div#supported-games a.collectible {
+		display:inline;
+		padding:7px 0;
+	}
+	
+	div#supported-games a.collectible img {
+		display:inline;
+	}
+	.supported {
+		margin:10px 0 15px 15px;
+	}
+	
+		.supported td {
+			padding-bottom:10px;
+		}
+
+	.supported-videos {
+		margin:5px 0 15px 15px;
+	}
+
+		.supported-videos td {
+			padding-bottom:10px;
+		}
+
+	#tempCenter {
+		margin-left:37px;
+	}
+	
+	.icon {
+		margin-bottom:10px;
+	}
+
+	.title {
+		background:url('../img/title-bg.gif') no-repeat;
+		color:#fff;
+		height:25px;
+		margin:-15px 0 5px -14px;
+		font-size:small;
+		padding:7px 0 0 0px;
+		overflow:hidden;
+		width:320px;
+	}
+	
+	.title h5, .title h6 {
+		color:#fff;
+		float:left;
+		white-space:nowrap;
+	}
+	
+	.title h5 {
+		padding:0 4px 0 14px;
+	}
+	
+	.title h6 {
+		border-left:1px solid #757575;
+		padding-left:4px;
+	}
+	
+	.titleSpacer {
+		width:100%;
+		height:0px;
+	}
+	
+	.information {
+		color:#767676;
+		margin:3px 20px;
+	}
+	
+	#promo {
+		background:#fafafa;
+	}
+
+	#promo table#gameList {
+		padding:10px 0 0 15px;
+	}
+
+		table#gameList tr {
+			padding:0 10px 0 20px;
+		}
+
+			table#gameList td {
+				padding:0px 10px 10px 0px;
+				vertical-align:top;
+				/*border-bottom:1px solid #e9e9e9;*/
+			}
+				
+				table#gameList td img {
+					/*
+					border:1px solid #000;
+					border-left:none;
+					*/
+				}
+			
+				table#gameList td a {
+					text-decoration:none;
+					color:#822835;
+				}
+
+				table#gameList td.gameTitle {
+					color:#555555;
+					font-weight:bolder;
+					font-size:large;
+				}
+				
+		#promo .demos {
+			background:#e2e2e2 url('../img/main-bg.gif') repeat-y;
+			width:320px;
+			min-height:212px;
+		}
+
+	ul.grid {
+		list-style:none;
+		margin:0 0 0 3px;
+		padding:5px 0 0 0;
+	} 
+
+		ul.grid li {
+			float:left;
+			margin:0 2px 3px;
+			display:block;
+		}
+		
+	ul.grid2 {
+		list-style:none;
+		margin:0 0 0 3px;
+		padding:14px 0 0 15px;
+	} 
+
+		ul.grid2 li {
+			margin:0 0 12px 0;
+			display:block;
+		}
+		
+	table.visit {
+		margin-top:7px;
+		margin-bottom:10px;
+		width:290px;
+		text-align:center;
+	}
+	
+		table.visit img {
+			display:inline;
+		}
+	
+	
+	h5.topSellers {
+		color:#085da1;
+		font-size:large;
+		font-weight:bold;
+		text-align:center;
+		margin-top:15px;
+	}
+
+	table.autoCenter {
+		width:292px;
+		text-align:center;
+	}
+	
+		table.autoCenter img {
+			display:inline;
+		}
+		
+/*** END MAIN ZONE ***/
+		
+		
+
+/*** TRIVIA ***/
+
+#trivia {
+	position:relative;
+    width:320px;
+    height:212px;
+    color:#fff;
+}
+
+	#trivia .intro {
+		margin:0 17px 0;
+		padding-top:35px;
+	}
+	
+		#trivia .intro td {
+			vertical-align:top;
+		}
+	
+		#trivia .intro p {
+			color:#fff;
+			margin:0 0 0 7px;
+			font-size:15px;
+		}
+		
+			#trivia .intro p.triviaTitle {
+				font-size:larger;
+				font-weight:bold;
+			}
+			
+	#trivia #final .intro {
+		padding-top:25px;
+	}
+	
+		#trivia #final .intro p.triviaTitle {
+			padding-left:103px;
+			margin:0;
+		}
+	
+		#trivia #final .intro p.finalScore {
+			color:#000;
+			font-weight:bold;
+			font-size:large;
+			font-size:15px;
+			margin:5px 0 0 0px;
+			padding-left:103px;
+		}
+		
+		#trivia #final .intro p.password {
+			padding-left:95px;
+			margin-top:7px;
+		}
+	
+	#trivia .navigation {
+		margin:0;
+		width:100%;
+		position:absolute;
+		top:133px;
+	}
+		
+		#trivia .navigation td {
+			padding:0 17px 10px;
+			text-align:center;
+		}	
+		
+			#trivia .navigation td img {
+				display:inline;
+			}
+
+	#trivia .button a {
+		display:block;
+		height:48px;
+		width:105px;
+		color:#fff;
+		padding:0 10px;
+		font-size:13px;
+		text-decoration:none;
+		font-weight:bold;
+		text-align:center;
+		position:relative;
+		vertical-align:middle;
+		display:table-cell;
+	}
+	
+		#trivia .button a span {
+			display:block;
+		}
+	
+	
+	#trivia .timer {
+		position:absolute;
+		top:0px;
+		left:0px;
+		z-index:1;
+	}
+		
+	#trivia .question {
+		height: 160px;
+    	padding: 60px 0 0 75px;
+    	width: 326px;
+    	position:relative;
+	}
+	
+	
+		#trivia .question p {
+			margin:0;
+			color:#000;
+			font-size:large;
+			font-weight:bold;
+			width:310px;
+		}
+		
+			#trivia .question p.number {
+				font-weight:normal;
+				font-size:13px;
+				margin-bottom:7px;
+			}
+	
+	#trivia div.answers {
+		width:320px;
+		height:162px;
+		padding-top:58px;
+	}
+	
+	#trivia div#layout2 {
+		padding-top:80px;
+	}
+	
+		#trivia div.answers ul {
+			list-style-type:none;
+			margin:0 auto;
+			padding:0;
+			width:260px;
+		}
+		
+		#trivia div.answers ul li {
+			display:block;
+			float:left;
+			padding:0 5px 3px 0;
+		}
+			
+		
+	#trivia .response {
+		padding-top:32px;
+		width:295px;
+		text-align:center;
+		margin:0 auto;
+	}	
+	
+		#trivia .response .answer {
+			font-size:large;
+			font-weight:bold;
+			color:#fff;
+			text-align:center;
+		}
+		
+			#trivia .response .answer img {
+				display:inline;
+			}
+		
+		#trivia .response .answerText {
+			font-size:large;
+			color:#000;
+			margin-top:10px;
+		}
+		
+	#trivia .next {
+		position:absolute;
+		bottom:19px;
+		right:19px;	
+	}
+	
+	#trivia .advancedStart {
+		padding:10px 20px;
+		margin:0;
+		font-size:small;
+		font-size:11px;
+		font-weight:bold;
+		text-align:center;
+	}
+	
+		#trivia .advancedStart tr td {
+			padding-bottom:10px;
+		}
+		
+			#trivia .advancedStart tr td.button {
+				padding-left:15px;
+			}
+	
+			#trivia .advancedStart p.instructions {
+				text-align:left;
+				color:#000;
+				margin:0;
+			}
+			
+			#trivia .advancedStart img {
+				display:inline;
+			}
+	
+	#topScreen {
+		width:400px;
+		height:220px;
+	}
+	
+		#topScreen .leaderboard {
+			color:#fff;
+			text-transform:uppercase;
+			margin:0 auto;
+			font-size:small;
+			font-size:12px;
+			padding-top:40px;
+		}
+		
+			#topScreen .leaderboard tr td {
+				padding:0 55px 1px 0;
+			}
+			
+				#topScreen .leaderboard tr td.score {
+					padding-right:0;
+				}
+			
+	
+	
+	div#inputScreen {
+		padding-top:50px;
+		text-align:center;
+	}
+	
+		div#inputScreen img {
+			display:inline;
+		}
+	
+		div#inputScreen p {
+			color:#fff;
+			width:225px;
+			margin:10px auto;
+		}
+		
+			div#inputScreen p.score {
+				font-weight:bold;
+				font-size:18px;
+				font-size:large;
+			}
+	
+			
+	.inputForm {
+		padding-top:20px;
+		width:100%;
+		text-align:center;
+	}
+	
+		.inputForm img {
+			display:inline;
+		}
+			
+		.inputForm input.initials {
+			display:block;	
+			border:1px solid #999;
+			margin:0 auto;
+			text-align:center;
+			font-size:large;
+			width:50px;
+			margin-top:20px;
+		}
+		
+		.inputForm .button {
+			padding-top:25px;
+		}
+		
+		.inputForm input.submit {
+			display:block;
+			height:48px;
+			width:125px;
+			color:#fff;
+			padding:0;
+			font-size:13px;
+			font-weight:bold;
+			text-align:center;
+			vertical-align:middle;
+			border:none;
+			margin:0 auto;
+			background:transparent;
+		}
+	
+/*** END TRIVIA ***/
+	
+	
+	
+	
+		
+/**** POKEMON ****/
+
+	#pokemon-nav {
+		background:url(../img/pokemon/nav_bg.jpg) no-repeat;
+		width:320px;
+		height:212px;
+	}
+	
+		#pokemon-nav ul {
+			list-style-type:none;
+			margin:0;
+			padding:18px 0 0 18px;
+			overflow:hidden;
+		}
+		
+			#pokemon-nav ul li {
+				float:left;
+				margin:0 8px 8px 0;
+				list-style:none;
+				display:block;
+			}
+			
+				#pokemon-nav ul li a {
+					display:block;
+				}
+				
+	
+	/* Specific Pokemon Pages */
+
+	#video-games {
+		background:#23619b url(../img/pokemon/videogame_bg.jpg) no-repeat;
+	}
+	
+	#tcg {
+		background:#ff9d45 url(../img/pokemon/tcg_bg.jpg) no-repeat;
+	}
+	
+	#pokemonTV {
+		background:#1a9fa4 url(../img/pokemon/tv_bg.jpg) no-repeat;
+	}
+	
+	#newsAndEvents {
+		background:#018f0a url(../img/pokemon/news_bg.jpg) no-repeat;
+	}
+	
+	#blackWhite {
+		background:#585858 url(../img/pokemon/blackwhite_bg.jpg) no-repeat;
+	}
+	
+	#newsDetail {
+		background:#005205 url(../img/pokemon/news_detail_bg.jpg) no-repeat;
+	}
+	
+	
+		div.story-detail {
+			width:320px;
+			min-height:212px;
+			position:relative;
+			padding-top:20px;
+		}
+		
+			div.story-detail h1 {
+				color:#cbf071;
+				font-size:large;
+				font-weight:bold;
+				margin:0 35px 0 15px;
+			}
+			
+			div.story-detail p {
+				color:#fff;
+				font-size:small;
+				margin:10px 15px;
+			}
+			
+			div.story-detail .story-button {
+				width:287px;
+				margin:25px auto 0;
+				padding-bottom:25px;
+			}
+	
+	
+	
+	
+	/* Generic Pokemon */
+
+	div.pokemon-page {
+		width:320px;
+		min-height:212px;
+	}
+	
+		div.pokemon-page h1 {
+			text-align:center;
+		}
+		
+			div.pokemon-page h1 img {
+				display:inline;
+			}
+	
+		div.pokemon-page div.container {
+			padding:0px 5px 0px;
+		}
+		
+			div.pokemon-page div.container .top-shelf {
+				background:url(../img/pokemon/top_shelf.gif) no-repeat;
+				width:307px;
+				height:18px;
+			}
+			
+			div.pokemon-page div.container .bottom-shelf {
+				background:url(../img/pokemon/bottom_shelf.gif) no-repeat;
+				width:307px;
+				height:4px;
+			}
+			
+			div.pokemon-page div.container p.intro {
+				background:url(../img/pokemon/intro_bg.gif) repeat-y;
+				margin:0;
+				color:#fff;
+				width:281px;
+				padding:10px 13px;
+			}
+			
+				div.pokemon-page div.container p.intro www {
+					display:block;
+					color:#5dc6d4;
+					font-size:small;
+					text-decoration:none;
+					padding:6px 0;
+				}
+	
+			div.pokemon-page ul.list-container {
+				margin:0;
+				padding:0px 5px 15px 5px;
+			}
+			
+				div.pokemon-page ul.list-container li {
+					/*background:url(../img/pokemon/list_item_bg.gif) no-repeat;*/
+					background:url(../img/pokemon/intro_bg.gif) repeat-y;
+					width:288px;
+					/*height:59px;*/
+					list-style-type:none;
+					margin:0;
+					padding:7px 9px;
+					border-top:1px solid #3c3c3c;
+					border-bottom:1px solid #555555;
+				}
+				
+					div.pokemon-page ul.list-container li.top-shelf {
+						background:url(../img/pokemon/list_top_shelf.gif) no-repeat;
+						width:307px;
+						height:7px;	
+						padding:0;
+						border:none;
+					}
+							
+					div.pokemon-page ul.list-container li.bottom-shelf {
+						background:url(../img/pokemon/list_bottom_shelf.gif) no-repeat;
+						width:307px;
+						height:6px;
+						padding:0;
+						border:none;
+					}
+				
+/*** END POKEMON ***/
+
+		
+	
+/*** AGE GATE ***/
+
+	.agegate-top {
+		width:400px;
+		height:220px;
+	}
+	
+	.agegate-bottom {
+		width:320px;
+		height:212px;
+	}
+
+	#agegate {
+		background:#ffffd7;
+		color:#413c32;
+	}
+	
+		#agegate h1 {
+			border-bottom:1px solid #c4b078;
+			font-size:large;
+			text-align:center;
+			padding:10px 10px;
+		}
+		
+		#agegate h2 {
+			font-size:large;
+			text-align:center;
+			padding:10px 10px;
+		}
+		
+		#agegate p {
+			font-size:medium;
+			text-align:center;
+			padding:45px 15px 0;
+		}
+		
+		#agegate p.middle {
+			padding:85px 15px 0;
+			margin:0;
+		}
+		
+		#agegate form {
+			padding:45px 0 0;
+		}
+		
+			#agegate form table {
+				width:210px;
+				margin:0 auto;
+			}
+			
+				#agegate form table td {
+					text-align:center;
+				}
+		
+			#agegate input {
+				color:#525048;
+				border:1px solid #a19b8a;
+			}
+			
+				#agegate input.submit {
+					background-image:url(../img/age_submit.gif);
+					background-image-pressed:url(../img/age_submit_pressed.gif);
+					color:#413c32;
+					width:312px;
+					height:40px;
+					border:none;
+					position:absolute;
+					bottom:-1px;
+					left:-1px;
+				}
+
+/*** END AGE GATE ***/
+	
+	
+	
+#gdc {
+	background:#e5e5e9 url(../img/gdc_bottom.jpg) no-repeat;
+	width:302px;
+	padding:100px 0 0 18px;
+}
+	
+#e3Home {
+	background:#e2e2e2 url('../img/e3_bg.jpg') fixed;
+	width:286px;
+	height:212px;
+	padding:15px 14px 0 20px;
+}	
+
+#e3 {
+	background:#e2e2e2 url('../img/e3_bg.jpg') fixed;
+	width:292px;
+	height:212px;
+	padding:15px 14px 0 14px;
+}
+
+	#e3 td {
+		padding-bottom:5px;
+	}
+	
+	
+	
+	
+	
