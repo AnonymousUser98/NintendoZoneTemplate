@@ -1,0 +1,2 @@
+Foreground: #9d6ff3
+Background: #1b1f3b
